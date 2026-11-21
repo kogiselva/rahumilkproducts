@@ -1,0 +1,16 @@
+{
+  "name": "Rahu Milk Products - Sivakasi",
+  "short_name": "Rahu Milk",
+  "description": "Pure Desi Ghee, Fresh Paneer & Sivakasi Palgova by Kogila Selvaganesh",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFBF7",
+  "theme_color": "#D97706",
+  "icons": [
+    {
+      "src": "/assets/images/ghee.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

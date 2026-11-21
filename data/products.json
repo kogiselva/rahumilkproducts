@@ -1,0 +1,192 @@
+[
+  {
+    "id": "ghee-pure",
+    "name": "Pure Desi Ghee",
+    "kannada_name": "ಶುದ್ಧ ತುಪ್ಪ",
+    "tamil_name": "சுத்தமான நெய்",
+    "hindi_name": "शुद्ध देसी घी",
+    "category": "ghee",
+    "badge": "100% Traditional Bilona",
+    "rating": 4.9,
+    "reviewCount": 164,
+    "description": "Slow-cooked golden aromatic ghee made from pure cultured butter. Danedar (granular) texture with heavenly traditional aroma, rich in natural vitamins A, D, E & K.",
+    "highlights": ["A2 Pure Dairy", "Zero Preservatives", "Granular Texture", "Hand Churned"],
+    "image": "/assets/images/ghee.jpg",
+    "fallbackColor": "#F59E0B",
+    "fallbackIcon": "ghee-pot",
+    "inStock": true,
+    "variants": [
+      {
+        "id": "ghee-500ml",
+        "label": "Half Litre (500 ml)",
+        "volume": "500 ml",
+        "price": 400,
+        "originalPrice": 450,
+        "discount": "11% OFF",
+        "isPopular": false
+      },
+      {
+        "id": "ghee-1000ml",
+        "label": "One Litre (1000 ml)",
+        "volume": "1000 ml",
+        "price": 800,
+        "originalPrice": 900,
+        "discount": "₹100 Savings",
+        "isPopular": true
+      }
+    ],
+    "defaultVariantIndex": 0
+  },
+  {
+    "id": "paneer-malai",
+    "name": "Malai Paneer",
+    "kannada_name": "ಮಲೈ ಪನೀರ್",
+    "tamil_name": "மலாய் பன்னீர்",
+    "hindi_name": "मलाई पनीर",
+    "category": "paneer",
+    "badge": "Super Soft & Creamy",
+    "rating": 4.9,
+    "reviewCount": 128,
+    "description": "Ultra-soft, melt-in-the-mouth cottage cheese crafted from rich whole buffalo milk. High natural fat content, perfect for gravies, Shahi Paneer, and sizzling tikkas.",
+    "highlights": ["Full Cream Milk", "Melt in Mouth", "No Starch", "Made Fresh Daily"],
+    "image": "/assets/images/paneer-malai.jpg",
+    "fallbackColor": "#10B981",
+    "fallbackIcon": "paneer-cube",
+    "inStock": true,
+    "variants": [
+      {
+        "id": "paneer-malai-1kg",
+        "label": "1 kg Fresh Block",
+        "volume": "1 kg",
+        "price": 460,
+        "originalPrice": 500,
+        "discount": "Best Quality",
+        "isPopular": true
+      },
+      {
+        "id": "paneer-malai-500g",
+        "label": "500 g Fresh Block",
+        "volume": "500 g",
+        "price": 230,
+        "originalPrice": 250,
+        "discount": "Family Pack",
+        "isPopular": false
+      }
+    ],
+    "defaultVariantIndex": 0
+  },
+  {
+    "id": "paneer-diet",
+    "name": "Diet Paneer",
+    "kannada_name": "ಡಯಟ್ ಪನೀರ್",
+    "tamil_name": "டயட் பன்னீர்",
+    "hindi_name": "डाइट पनीर",
+    "category": "paneer",
+    "badge": "High Protein & Balanced",
+    "rating": 4.8,
+    "reviewCount": 94,
+    "description": "Specially formulated for health-conscious food lovers and fitness goals. Optimum balance of protein and moderate fat to keep you energetic and lean without sacrificing taste.",
+    "highlights": ["Fitness Friendly", "20g Protein / 100g", "Firm & Fresh", "Low Sodium"],
+    "image": "/assets/images/paneer-diet.jpg",
+    "fallbackColor": "#059669",
+    "fallbackIcon": "paneer-cube",
+    "inStock": true,
+    "variants": [
+      {
+        "id": "paneer-diet-1kg",
+        "label": "1 kg Fresh Block",
+        "volume": "1 kg",
+        "price": 460,
+        "originalPrice": 490,
+        "discount": "Fitness Choice",
+        "isPopular": true
+      },
+      {
+        "id": "paneer-diet-500g",
+        "label": "500 g Fresh Block",
+        "volume": "500 g",
+        "price": 230,
+        "originalPrice": 245,
+        "discount": "Gym Pack",
+        "isPopular": false
+      }
+    ],
+    "defaultVariantIndex": 0
+  },
+  {
+    "id": "paneer-nonfat",
+    "name": "Non-Fat Paneer",
+    "kannada_name": "ನಾನ್-ಫ್ಯಾಟ್ ಪನೀರ್",
+    "tamil_name": "கொழுப்பில்லாத பன்னீர்",
+    "hindi_name": "नॉन-फैट पनीर",
+    "category": "paneer",
+    "badge": "Zero Fat • Max Protein",
+    "rating": 4.7,
+    "reviewCount": 82,
+    "description": "Crafted exclusively from pure skimmed dairy milk with zero added fats. High biological value protein (25g+ protein per 100g), the ideal choice for bodybuilding and weight loss diets.",
+    "highlights": ["0% Saturated Fat", "25g+ Protein", "Pure Skim Milk", "Keto & Weight Loss"],
+    "image": "/assets/images/paneer-nonfat.jpg",
+    "fallbackColor": "#3B82F6",
+    "fallbackIcon": "paneer-cube",
+    "inStock": true,
+    "variants": [
+      {
+        "id": "paneer-nonfat-1kg",
+        "label": "1 kg Fresh Block",
+        "volume": "1 kg",
+        "price": 400,
+        "originalPrice": 440,
+        "discount": "Value Price",
+        "isPopular": true
+      },
+      {
+        "id": "paneer-nonfat-500g",
+        "label": "500 g Fresh Block",
+        "volume": "500 g",
+        "price": 200,
+        "originalPrice": 220,
+        "discount": "Starter Pack",
+        "isPopular": false
+      }
+    ],
+    "defaultVariantIndex": 0
+  },
+  {
+    "id": "milk-gova",
+    "name": "Palgova (Pure Milk Gova / Khoya)",
+    "kannada_name": "ಹಾಲು ಕೋವ",
+    "tamil_name": "சுவையான பால்கோவா (தூய மாவா)",
+    "hindi_name": "शुद्ध खोया / मावा (पालगोवा)",
+    "category": "gova",
+    "badge": "Slow Simmered • 100% Pure",
+    "rating": 4.9,
+    "reviewCount": 147,
+    "description": "Authentic traditional South Indian Srivilliputtur & Sivakasi style Palgova / Khoya prepared by slow-simmering whole farm-fresh milk in heavy iron kadhais in Bharathi Nagar. Pure, rich, caramelized texture, perfect for festivals and sweets.",
+    "highlights": ["Pure Whole Milk", "No Added Starch", "Traditional Kadai Cooked", "Rich Aroma"],
+    "image": "/assets/images/palgova.jpg",
+    "fallbackColor": "#D97706",
+    "fallbackIcon": "gova-bowl",
+    "inStock": true,
+    "variants": [
+      {
+        "id": "gova-500g",
+        "label": "Half kg (500 g)",
+        "volume": "500 g",
+        "price": 220,
+        "originalPrice": 250,
+        "discount": "Standard Pack",
+        "isPopular": false
+      },
+      {
+        "id": "gova-1kg",
+        "label": "1 kg Pack",
+        "volume": "1 kg",
+        "price": 440,
+        "originalPrice": 490,
+        "discount": "Best Value",
+        "isPopular": true
+      }
+    ],
+    "defaultVariantIndex": 0
+  }
+]

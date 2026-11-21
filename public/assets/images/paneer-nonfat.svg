@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgNonFat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="50%" stop-color="#DBEAFE"/>
+      <stop offset="100%" stop-color="#BFDBFE"/>
+    </linearGradient>
+    <linearGradient id="blueBoard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+    <filter id="nfShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#1E3A8A" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="450" fill="url(#bgNonFat)"/>
+  <circle cx="300" cy="240" r="180" fill="#93C5FD" opacity="0.4"/>
+
+  <!-- Platter -->
+  <g filter="url(#nfShadow)">
+    <rect x="90" y="150" width="420" height="220" rx="20" fill="url(#blueBoard)"/>
+    <rect x="96" y="156" width="408" height="208" rx="16" fill="#1E40AF" opacity="0.3"/>
+  </g>
+
+  <!-- Pure White Skimmed Paneer Blocks -->
+  <g filter="url(#nfShadow)">
+    <polygon points="180,180 300,140 380,175 260,215" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <polygon points="180,180 260,215 260,295 180,260" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <polygon points="260,215 380,175 380,255 260,295" fill="#EDF2F7" stroke="#E2E8F0"/>
+  </g>
+
+  <!-- Cubes on side -->
+  <g filter="url(#nfShadow)">
+    <polygon points="290,260 340,240 380,255 330,275" fill="#FFFFFF"/>
+    <polygon points="290,260 330,275 330,315 290,300" fill="#F8FAFC"/>
+    <polygon points="330,275 380,255 380,295 330,315" fill="#EDF2F7"/>
+
+    <polygon points="370,240 415,222 450,235 405,253" fill="#FFFFFF"/>
+    <polygon points="370,240 405,253 405,288 370,275" fill="#F8FAFC"/>
+    <polygon points="405,253 450,235 450,270 405,288" fill="#EDF2F7"/>
+  </g>
+
+  <!-- 0% FAT Huge Ribbon Badge -->
+  <g transform="translate(265, 110)" filter="url(#nfShadow)">
+    <circle cx="35" cy="35" r="30" fill="#2563EB" stroke="#FFFFFF" stroke-width="3"/>
+    <text x="35" y="31" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">0%</text>
+    <text x="35" y="47" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="800" fill="#BFDBFE" text-anchor="middle">FAT</text>
+  </g>
+
+  <!-- 25g+ Protein Tag -->
+  <g transform="translate(100, 310)">
+    <rect width="130" height="28" rx="14" fill="#3B82F6"/>
+    <text x="65" y="18" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">⚡ 25g+ PROTEIN / 100g</text>
+  </g>
+
+  <!-- Top Badges -->
+  <g transform="translate(35, 35)">
+    <rect width="165" height="34" rx="17" fill="#2563EB" filter="url(#nfShadow)"/>
+    <text x="82" y="22" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">💪 100% NON-FAT PANEER</text>
+  </g>
+
+  <g transform="translate(425, 35)">
+    <rect width="140" height="42" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" filter="url(#nfShadow)"/>
+    <text x="70" y="20" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#1E3A8A" text-anchor="middle">Non-Fat Paneer</text>
+    <text x="70" y="34" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#2563EB" text-anchor="middle">1 kg ₹400</text>
+  </g>
+</svg>

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "MSG-1",
+    "orderId": "RAHU-1001",
+    "customerName": "Karthik Raja",
+    "customerPhone": "+91 94431 23456",
+    "sender": "customer",
+    "text": "Vanakkam, is the Ghee traditional bilona churned here in Sivakasi?",
+    "timestamp": "2026-11-21T05:32:00.000Z",
+    "read": true
+  },
+  {
+    "id": "MSG-2",
+    "orderId": "RAHU-1001",
+    "customerName": "Karthik Raja",
+    "customerPhone": "+91 94431 23456",
+    "sender": "admin",
+    "text": "Vanakkam Karthik sir! Yes, this is Kogila Selvaganesh from Rahu Milk Products, Bharathi Nagar, Sivakasi. Our ghee is 100% pure traditional bilona hand-churned from fresh cultured butter. It has that rich golden granular (danedar) texture and heavenly aroma!",
+    "timestamp": "2026-11-21T05:34:00.000Z",
+    "read": true
+  },
+  {
+    "id": "MSG-3",
+    "orderId": "RAHU-1002",
+    "customerName": "Meenakshi Sundaram",
+    "customerPhone": "+91 97890 54321",
+    "sender": "customer",
+    "text": "Hello madam, can you deliver 2kg Milk Gova to Kamaraj Nagar before 1 PM?",
+    "timestamp": "2026-11-21T05:46:00.000Z",
+    "read": true
+  },
+  {
+    "id": "MSG-4",
+    "orderId": "RAHU-1002",
+    "customerName": "Meenakshi Sundaram",
+    "customerPhone": "+91 97890 54321",
+    "sender": "admin",
+    "text": "Yes Meenakshi ma'am! We have packed the fresh morning batch slow-cooked in our Bharathi Nagar dairy unit. Our rider is dispatched and will reach you within 45 minutes!",
+    "timestamp": "2026-11-21T05:49:00.000Z",
+    "read": true
+  }
+]

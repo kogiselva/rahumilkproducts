@@ -1,0 +1,86 @@
+[
+  {
+    "id": "RAHU-1001",
+    "createdAt": "2026-11-21T05:30:00.000Z",
+    "customer": {
+      "name": "Karthik Raja",
+      "phone": "+91 94431 23456",
+      "address": "Chairman A. Shanmugam Road, Sivakasi",
+      "landmark": "Near Sivakasi New Bus Stand"
+    },
+    "deliverySlot": "Delivery within 1 Day (Factory Direct)",
+    "items": [
+      {
+        "productId": "ghee-pure",
+        "productName": "Pure Desi Ghee",
+        "variantId": "ghee-1000ml",
+        "variantLabel": "One Litre (1000 ml)",
+        "price": 800,
+        "quantity": 1,
+        "subtotal": 800
+      },
+      {
+        "productId": "paneer-malai",
+        "productName": "Malai Paneer",
+        "variantId": "paneer-malai-1kg",
+        "variantLabel": "1 kg Fresh Block",
+        "price": 460,
+        "quantity": 1,
+        "subtotal": 460
+      }
+    ],
+    "itemCount": 2,
+    "totalAmount": 1260,
+    "paymentMethod": "COD",
+    "paymentStatus": "Pending on Delivery",
+    "customerNote": "Fresh factory batch paneer required.",
+    "status": "confirmed",
+    "statusHistory": [
+      { "status": "placed", "time": "2026-11-21T05:30:00.000Z", "note": "Factory order received (24h booking)" },
+      { "status": "confirmed", "time": "2026-11-21T05:35:00.000Z", "note": "Accepted by Kogila Selvaganesh (Delivery within 1 day)" }
+    ]
+  },
+  {
+    "id": "RAHU-1002",
+    "createdAt": "2026-11-21T05:45:00.000Z",
+    "customer": {
+      "name": "Meenakshi Sundaram",
+      "phone": "+91 97890 54321",
+      "address": "Plot 12, Kamaraj Nagar, Sivakasi",
+      "landmark": "Opposite Lions School"
+    },
+    "deliverySlot": "Delivery within 1 Day (Factory Direct)",
+    "items": [
+      {
+        "productId": "milk-gova",
+        "productName": "Palgova (Pure Milk Gova / Khoya)",
+        "variantId": "gova-1kg",
+        "variantLabel": "1 kg Pack",
+        "price": 440,
+        "quantity": 2,
+        "subtotal": 880
+      },
+      {
+        "productId": "paneer-diet",
+        "productName": "Diet Paneer",
+        "variantId": "paneer-diet-1kg",
+        "variantLabel": "1 kg Fresh Block",
+        "price": 460,
+        "quantity": 1,
+        "subtotal": 460
+      }
+    ],
+    "itemCount": 3,
+    "totalAmount": 1340,
+    "paymentMethod": "UPI",
+    "paymentStatus": "Paid Online",
+    "customerNote": "Need fresh factory palgova for festival sweets.",
+    "status": "out_for_delivery",
+    "statusHistory": [
+      { "status": "placed", "time": "2026-11-21T05:45:00.000Z", "note": "Order placed online" },
+      { "status": "confirmed", "time": "2026-11-21T05:48:00.000Z", "note": "Accepted for 1-day factory delivery" },
+      { "status": "preparing", "time": "2026-11-21T05:55:00.000Z", "note": "Freshly churned & packaged at Bharathi Nagar factory" },
+      { "status": "out_for_delivery", "time": "2026-11-21T06:05:00.000Z", "note": "Dispatched for 1-day delivery in Sivakasi" }
+    ]
+  }
+]

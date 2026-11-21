@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Portal - Rahu Milk Products | Kogila Selvaganesh</title>
+  <link rel="stylesheet" href="/css/admin.css">
+  <style>
+    /* Owner Login Gateway Styles */
+    #owner-login-overlay {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .login-card {
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 32px 28px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .lock-icon-wrap {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin: 0 auto 16px;
+      color: #FFFFFF;
+      box-shadow: 0 10px 20px rgba(217, 119, 6, 0.3);
+    }
+    .login-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 4px;
+    }
+    .login-sub {
+      font-size: 12px;
+      color: #64748B;
+      margin-bottom: 20px;
+    }
+    .owner-info-pill {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-radius: 12px;
+      padding: 10px;
+      font-size: 11px;
+      color: #92400E;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .pin-input-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .pin-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #334155;
+      display: block;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .pin-field {
+      width: 100%;
+      background: #F8FAFC;
+      border: 2px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-align: center;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .pin-field:focus {
+      border-color: #D97706;
+      background: #FFFFFF;
+      box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.15);
+    }
+    .unlock-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(217, 119, 6, 0.3);
+      transition: all 0.2s;
+    }
+    .unlock-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(217, 119, 6, 0.4);
+    }
+    .login-error {
+      background: #FEF2F2;
+      border: 1px solid #FCA5A5;
+      color: #DC2626;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: none;
+    }
+    .back-home-link {
+      display: inline-block;
+      margin-top: 18px;
+      font-size: 12px;
+      color: #94A3B8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-home-link:hover {
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- OWNER LOGIN OVERLAY GATEWAY -->
+  <div id="owner-login-overlay">
+    <div class="login-card">
+      <div class="lock-icon-wrap">🔒</div>
+      <h2 class="login-title">Owner Access Only</h2>
+      <p class="login-sub">Rahu Milk Products Store Administration</p>
+
+      <div class="owner-info-pill">
+        👑 <strong>Authorized Owner:</strong> Kogila Selvaganesh<br>
+        📞 <strong>Registered Phone:</strong> 9894039804<br>
+        📍 <strong>Location:</strong> Bharathi Nagar, Sivakasi
+      </div>
+
+      <div class="login-error" id="login-error-msg">
+        ⚠️ Invalid Owner PIN. Access restricted to Kogila Selvaganesh.
+      </div>
+
+      <form id="owner-login-form" onsubmit="handleOwnerLogin(event)">
+        <div class="pin-input-group">
+          <label class="pin-label">Enter Owner Security PIN / Password</label>
+          <input 
+            type="password" 
+            id="owner-pin-input" 
+            class="pin-field" 
+            placeholder="••••" 
+            maxlength="20" 
+            autocomplete="current-password"
+            required
+            autofocus
+          />
+        </div>
+
+        <button type="submit" class="unlock-btn" id="unlock-btn">
+          Unlock Dashboard 🔓
+        </button>
+      </form>
+
+      <div style="margin-top: 14px; font-size: 11px; color: #94A3B8;">
+        (Owner Security PIN: <code>9804</code> or <code>rahu2026</code>)
+      </div>
+
+      <a href="/" class="back-home-link">
+        ← Return to Customer App
+      </a>
+    </div>
+  </div>
+
+  <!-- AUTHENTICATED ADMIN DASHBOARD CONTENT -->
+  <div id="admin-dashboard-container" style="display: none; width: 100%;">
+    
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-brand">
+        <div class="sidebar-logo">🥛</div>
+        <div class="sidebar-title">
+          <h2>Rahu Dairy Hub</h2>
+          <span>Kogila Selvaganesh • Sivakasi</span>
+        </div>
+      </div>
+
+      <!-- Owner Profile Pill in Sidebar -->
+      <div style="margin: 14px 16px; padding: 12px; background: rgba(255, 255, 255, 0.07); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <div style="font-size: 11px; color: #F59E0B; font-weight: 700; text-transform: uppercase;">Store Owner</div>
+        <div style="font-size: 13px; font-weight: 800; color: #FFFFFF; margin-top: 2px;">Kogila Selvaganesh</div>
+        <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;">📞 9894039804</div>
+        <div style="font-size: 10px; color: #94A3B8; margin-top: 1px;">📍 Bharathi Nagar, Sivakasi</div>
+      </div>
+
+      <nav class="sidebar-menu">
+        <a href="#orders-section" class="sidebar-item active">
+          <span>📦</span> Live Orders
+          <span class="sidebar-badge" id="sidebar-pending-badge">0</span>
+        </a>
+        <a href="#chat-section" class="sidebar-item">
+          <span>💬</span> Customer Messages
+        </a>
+        <a href="#products-section" class="sidebar-item">
+          <span>🧈</span> Products & Inventory
+        </a>
+        <a href="#analytics-section" class="sidebar-item">
+          <span>📊</span> Sales Analytics
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button onclick="toggleMobileModal()" style="background: rgba(255, 255, 255, 0.15); color: #FFF; border: none; padding: 10px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-bottom: 8px;">
+          <span>📱</span> Mobile QR Code
+        </button>
+        <button onclick="ownerLogout()" style="background: #EF4444; color: #FFF; border: none; padding: 10px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;">
+          <span>🚪</span> Logout Owner
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Area -->
+    <main class="admin-main">
+      
+      <!-- Top Navbar -->
+      <header class="admin-navbar">
+        <div class="nav-status-indicator">
+          <div class="live-pulse-dot"></div>
+          <span>Live Real-Time Hub Active (Bharathi Nagar, Sivakasi)</span>
+        </div>
+
+        <div class="nav-controls">
+          <button onclick="toggleMobileModal()" style="background: #E0F2FE; border: 1px solid #BAE6FD; padding: 8px 14px; border-radius: 9999px; font-size: 12px; font-weight: 700; color: #0284C7; cursor: pointer;">
+            📱 Open on Phone
+          </button>
+          <button class="audio-toggle-btn active" id="audio-toggle-btn">
+            <span>🔔</span> Audio Alerts: ON
+          </button>
+          <button onclick="ownerLogout()" style="background: #FEE2E2; border: 1px solid #FCA5A5; color: #DC2626; padding: 6px 12px; border-radius: 9999px; font-size: 11px; font-weight: 700; cursor: pointer;">
+            Logout ✕
+          </button>
+        </div>
+      </header>
+
+      <!-- Admin Content Body -->
+      <div class="admin-content">
+        
+        <!-- Toast Alert -->
+        <div id="admin-toast" style="display: none; background: #0F172A; color: #FFFFFF; padding: 12px 20px; border-radius: 12px; margin-bottom: 20px; font-weight: 700; font-size: 13px; box-shadow: var(--shadow-md);">
+          Alert Message
+        </div>
+
+        <!-- Owner Info Welcome Banner -->
+        <div style="background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border: 1.5px solid #FDE68A; border-radius: 16px; padding: 16px 20px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <h2 style="font-size: 17px; font-weight: 800; color: #78350F;">Rahu Milk Products Store Operations</h2>
+            <div style="font-size: 12px; color: #92400E; margin-top: 3px;">
+              Owner: <strong>Kogila Selvaganesh</strong> | 📞 9894039804 | ✉️ kogiselvarahu@gmail.com | 📍 Bharathi Nagar, Sivakasi
+            </div>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <a href="https://wa.me/919894039804" target="_blank" style="background: #25D366; color: #FFFFFF; padding: 8px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              💬 Store WhatsApp
+            </a>
+            <button onclick="toggleMobileModal()" style="background: #0284C7; color: #FFFFFF; border: none; padding: 8px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+              📱 Mobile URL
+            </button>
+          </div>
+        </div>
+
+        <!-- Analytics Stats Cards -->
+        <div class="stats-grid" id="analytics-section">
+          <div class="stat-card">
+            <div class="stat-info">
+              <span>Total Sales Revenue</span>
+              <h3 id="stat-total-revenue">₹0</h3>
+            </div>
+            <div class="stat-icon-wrap gold">₹</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <span>Total Orders Placed</span>
+              <h3 id="stat-total-orders">0</h3>
+            </div>
+            <div class="stat-icon-wrap blue">📦</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <span>Pending / In Kitchen</span>
+              <h3 id="stat-pending-orders">0</h3>
+            </div>
+            <div class="stat-icon-wrap purple">⏳</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <span>Successfully Delivered</span>
+              <h3 id="stat-delivered-orders">0</h3>
+            </div>
+            <div class="stat-icon-wrap green">✓</div>
+          </div>
+        </div>
+
+        <!-- Orders Management Section -->
+        <section id="orders-section" style="margin-bottom: 36px;">
+          <div class="orders-toolbar">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <h2 style="font-size: 18px; font-weight: 800; color: #0F172A;">Customer Orders</h2>
+              <span style="font-size: 12px; color: #64748B;">(Auto-updates in real time)</span>
+            </div>
+
+            <div class="filter-tabs">
+              <button class="filter-tab active" data-filter="all">All</button>
+              <button class="filter-tab" data-filter="placed">New Placed</button>
+              <button class="filter-tab" data-filter="confirmed">Accepted</button>
+              <button class="filter-tab" data-filter="preparing">Packing</button>
+              <button class="filter-tab" data-filter="out_for_delivery">On Road</button>
+              <button class="filter-tab" data-filter="delivered">Delivered</button>
+            </div>
+          </div>
+
+          <div class="orders-list" id="admin-orders-list">
+            <!-- Injected via admin.js -->
+          </div>
+        </section>
+
+        <!-- Customer Messages & Inquiries Section -->
+        <section id="chat-section" style="margin-bottom: 36px;">
+          <div style="margin-bottom: 14px;">
+            <h2 style="font-size: 18px; font-weight: 800; color: #0F172A;">Customer Live Inquiries</h2>
+            <span style="font-size: 12px; color: #64748B;">Chat directly with customers who booked products</span>
+          </div>
+
+          <div class="chat-center-wrapper">
+            <div class="chat-customer-list" id="chat-customer-list">
+              <!-- Customer list injected via admin.js -->
+            </div>
+
+            <div class="chat-thread-panel">
+              <div class="chat-thread-header">
+                <div style="font-weight: 800; font-size: 14px;" id="chat-thread-title">Select Customer</div>
+                <span style="font-size: 11px; color: #10B981; font-weight: 700;">● Active Connection</span>
+              </div>
+
+              <div class="chat-thread-body" id="chat-thread-body">
+                <!-- Thread injected via admin.js -->
+              </div>
+
+              <div class="chat-reply-bar">
+                <input 
+                  type="text" 
+                  id="admin-reply-input" 
+                  class="chat-reply-input" 
+                  placeholder="Type response as Kogila Selvaganesh..." 
+                />
+                <button class="chat-reply-btn" onclick="sendAdminReply()">
+                  Reply
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Products & Inventory Management Section -->
+        <section id="products-section" style="margin-bottom: 36px;">
+          <div style="margin-bottom: 14px;">
+            <h2 style="font-size: 18px; font-weight: 800; color: #0F172A;">Products & Stock Pricing</h2>
+            <span style="font-size: 12px; color: #64748B;">Real Product Photography Catalog - Rahu Milk Products</span>
+          </div>
+
+          <div class="products-table-card">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Real Food Photograph & Product</th>
+                  <th>Category</th>
+                  <th>Variants & Mandated Prices</th>
+                  <th>Stock Status</th>
+                </tr>
+              </thead>
+              <tbody id="admin-products-table-body">
+                <!-- Injected via admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Mobile Phone Connection Modal -->
+  <div id="admin-mobile-modal" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7); z-index: 9999; align-items: center; justify-content: center;">
+    <div style="background: #FFFFFF; border-radius: 20px; width: 90%; max-width: 440px; padding: 24px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.3); position: relative;">
+      <button onclick="toggleMobileModal()" style="position: absolute; top: 16px; right: 16px; background: #F1F5F9; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 16px; cursor: pointer;">✕</button>
+      
+      <div style="font-size: 36px; margin-bottom: 8px;">📱</div>
+      <h3 style="font-size: 18px; font-weight: 800; color: #0F172A; margin-bottom: 6px;">Open on Mobile Phone</h3>
+      <p style="font-size: 12px; color: #64748B; margin-bottom: 16px;">
+        Connect your phone to the same Wi-Fi as this laptop, then scan:
+      </p>
+
+      <div style="background: #FFFBEB; border: 2px solid #F59E0B; border-radius: 16px; padding: 14px; display: inline-block; margin-bottom: 16px;">
+        <img 
+          src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=http://192.168.100.54:3000/admin" 
+          alt="Scan QR" 
+          style="width: 160px; height: 160px; display: block;" 
+        />
+      </div>
+
+      <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 10px; text-align: left; font-size: 12px; margin-bottom: 14px;">
+        <div><strong>Admin Dashboard on Phone:</strong> <code style="color: #2563EB;">http://192.168.100.54:3000/admin</code></div>
+      </div>
+
+      <button onclick="navigator.clipboard.writeText('http://192.168.100.54:3000/admin'); alert('Admin URL Copied');" style="background: #D97706; color: #FFF; border: none; padding: 10px 18px; border-radius: 10px; font-weight: 700; font-size: 13px; cursor: pointer; width: 100%;">
+        📋 Copy Admin Mobile URL
+      </button>
+    </div>
+  </div>
+
+  <script src="/js/audio.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

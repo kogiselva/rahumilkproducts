@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGova" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF7"/>
+      <stop offset="50%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FCD34D"/>
+    </linearGradient>
+    <linearGradient id="kadaiBronze" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78350F"/>
+      <stop offset="25%" stop-color="#D97706"/>
+      <stop offset="70%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+    <linearGradient id="govaCream" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="50%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="pedaGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF9C3"/>
+      <stop offset="70%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="govaShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#78350F" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="url(#bgGova)"/>
+  <circle cx="300" cy="240" r="170" fill="#FEF08A" opacity="0.6"/>
+
+  <!-- Table Pedestal Shadow -->
+  <ellipse cx="300" cy="380" rx="190" ry="24" fill="#78350F" opacity="0.25"/>
+
+  <!-- Traditional Iron/Brass Kadai (Wok) for simmering milk -->
+  <g filter="url(#govaShadow)">
+    <!-- Kadai Handles -->
+    <path d="M 120 220 C 90 220, 90 260, 125 260" stroke="#78350F" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M 480 220 C 510 220, 510 260, 475 260" stroke="#78350F" stroke-width="12" fill="none" stroke-linecap="round"/>
+
+    <!-- Kadai Outer Bowl -->
+    <path d="M 120 220 C 120 360, 480 360, 480 220 Z" fill="url(#kadaiBronze)"/>
+    <ellipse cx="300" cy="220" rx="180" ry="40" fill="#451A03"/>
+
+    <!-- Simmered Fresh Milk Gova Filling (Rich Creamy Mound) -->
+    <ellipse cx="300" cy="216" rx="172" ry="36" fill="url(#govaCream)"/>
+
+    <!-- Soft Dairy Granules / Gova Swirls -->
+    <ellipse cx="260" cy="215" rx="70" ry="20" fill="#FFFBEB" opacity="0.5"/>
+    <ellipse cx="340" cy="225" rx="60" ry="16" fill="#FBBF24" opacity="0.4"/>
+    <ellipse cx="300" cy="205" rx="90" ry="22" fill="#FEF3C7" opacity="0.6"/>
+  </g>
+
+  <!-- Traditional Shaped Fresh Milk Gova Sweets / Pedas in Center -->
+  <g filter="url(#govaShadow)">
+    <!-- Peda 1 (Left) -->
+    <ellipse cx="220" cy="210" rx="35" ry="22" fill="url(#pedaGold)" stroke="#D97706" stroke-width="1.5"/>
+    <circle cx="220" cy="208" r="8" fill="#D97706" opacity="0.4"/>
+    <!-- Pista on Peda 1 -->
+    <ellipse cx="220" cy="208" rx="4" ry="2.5" fill="#059669"/>
+
+    <!-- Peda 2 (Center) -->
+    <ellipse cx="300" cy="225" rx="42" ry="26" fill="url(#pedaGold)" stroke="#D97706" stroke-width="2"/>
+    <circle cx="300" cy="222" r="10" fill="#D97706" opacity="0.4"/>
+    <!-- Saffron & Pista on Peda 2 -->
+    <ellipse cx="297" cy="220" rx="5" ry="3" fill="#059669"/>
+    <ellipse cx="305" cy="223" rx="4" ry="2" fill="#059669"/>
+    <path d="M 292 216 Q 300 212 308 217" stroke="#DC2626" stroke-width="1.5" fill="none"/>
+
+    <!-- Peda 3 (Right) -->
+    <ellipse cx="380" cy="212" rx="36" ry="22" fill="url(#pedaGold)" stroke="#D97706" stroke-width="1.5"/>
+    <circle cx="380" cy="210" r="8" fill="#D97706" opacity="0.4"/>
+    <ellipse cx="380" cy="210" rx="4" ry="2.5" fill="#059669"/>
+  </g>
+
+  <!-- Garnishes: Green Pistachio slivers & Almond bits floating in Gova -->
+  <g fill="#10B981">
+    <ellipse cx="170" cy="225" rx="5" ry="2.5" transform="rotate(30 170 225)"/>
+    <ellipse cx="250" cy="235" rx="4" ry="2" transform="rotate(-40 250 235)"/>
+    <ellipse cx="350" cy="238" rx="5" ry="2.5" transform="rotate(20 350 238)"/>
+    <ellipse cx="420" cy="222" rx="4" ry="2" transform="rotate(60 420 222)"/>
+    <ellipse cx="270" cy="195" rx="4" ry="2" transform="rotate(10 270 195)"/>
+  </g>
+  <!-- Saffron Strands (Kesar) -->
+  <path d="M 245 220 Q 252 216 258 222" stroke="#EF4444" stroke-width="1.5" fill="none"/>
+  <path d="M 335 210 Q 342 206 348 212" stroke="#EF4444" stroke-width="1.5" fill="none"/>
+  <path d="M 365 228 Q 372 224 378 230" stroke="#EF4444" stroke-width="1.5" fill="none"/>
+
+  <!-- Top Badges -->
+  <g transform="translate(35, 35)">
+    <rect width="180" height="34" rx="17" fill="#D97706" filter="url(#govaShadow)"/>
+    <text x="90" y="22" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">🥣 PURE KADAI MILK GOVA</text>
+  </g>
+
+  <g transform="translate(415, 35)">
+    <rect width="150" height="42" rx="12" fill="#FFFFFF" stroke="#D97706" stroke-width="2" filter="url(#govaShadow)"/>
+    <text x="75" y="19" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#78350F" text-anchor="middle">Half kg ₹220</text>
+    <text x="75" y="34" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#D97706" text-anchor="middle">1 kg ₹440</text>
+  </g>
+</svg>

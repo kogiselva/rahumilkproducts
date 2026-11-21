@@ -1,0 +1,22 @@
+{
+  "name": "rahumilkproducts",
+  "version": "1.0.0",
+  "description": "Real-time Mobile App for Rahu Milk Products (Bharathi Nagar, Sivakasi) owned by Kogila Selvaganesh. Live booking, customer-admin communication, and operations dashboard.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "dairy",
+    "ghee",
+    "paneer",
+    "milk-gova",
+    "sivakasi",
+    "realtime-app",
+    "ecommerce",
+    "mobile-app"
+  ],
+  "author": "Kogila Selvaganesh <kogiselvarahu@gmail.com>",
+  "license": "ISC"
+}

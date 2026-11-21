@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Rahu Milk Products - Sivakasi | Kogila Selvaganesh</title>
+  <meta name="description" content="Rahu Milk Products, Bharathi Nagar, Sivakasi. Owned by Kogila Selvaganesh (9894039804). Real images of Pure Desi Ghee (Half Litre ₹400, 1 Litre ₹800), Malai Paneer ₹460, Diet Paneer ₹460, Non-Fat Paneer ₹400, and Palgova / Milk Gova (1kg ₹440, 500g ₹220).">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#D97706">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+<body>
+
+  <!-- Desktop Testing Helpers -->
+  <div class="desktop-controls">
+    <button class="desktop-btn" onclick="openMobileConnectModal()" style="background: #10B981; color: #FFFFFF; border-color: #059669;">
+      <span>📱</span> Open on Mobile Phone
+    </button>
+    <button class="desktop-btn" id="device-toggle-btn">
+      <span>🖥️</span> Toggle Frame
+    </button>
+  </div>
+
+  <!-- Toast Notification Pill -->
+  <div class="toast-notice" id="toast-notice">Welcome to Rahu Milk Products, Sivakasi! 🥛</div>
+
+  <!-- Mobile App Container -->
+  <div class="app-container">
+    
+    <!-- Mobile Status Bar -->
+    <div class="mobile-status-bar">
+      <span>9:41</span>
+      <div style="display: flex; gap: 6px; align-items: center;">
+        <span>5G</span>
+        <span>📶</span>
+        <span>100%</span>
+      </div>
+    </div>
+
+    <!-- App Header -->
+    <header class="app-header">
+      <div class="header-top">
+        <div class="brand-identity" onclick="openStoreInfoModal()" style="cursor: pointer;" title="View Owner & Store Details">
+          <div class="brand-logo-icon">🥛</div>
+          <div>
+            <div class="brand-name">Rahu Milk Products</div>
+            <div class="brand-sub">
+              <span>●</span> Prop: Kogila Selvaganesh • Sivakasi
+            </div>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button class="admin-badge-btn" onclick="openMobileConnectModal()" style="background: #E0F2FE; color: #0369A1; border-color: #BAE6FD;" title="Open on Phone">
+            <span>📱</span> Phone
+          </button>
+          <a href="tel:9894039804" class="admin-badge-btn" style="background: #D1FAE5; color: #047857; border-color: #A7F3D0;" title="Call Store">
+            <span>📞</span> Call
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Delivery Ribbon -->
+      <div class="delivery-ribbon" onclick="openStoreInfoModal()">
+        <div class="delivery-left">
+          <div class="location-dot"></div>
+          <div>
+            <div class="delivery-text">🏭 Bharathi Nagar Dairy Factory, Sivakasi</div>
+            <div class="delivery-sub">Order 24 Hours • Factory Batch Delivered Within 1 Day</div>
+          </div>
+        </div>
+        <span class="change-link">Factory Details &rsaquo;</span>
+      </div>
+    </header>
+
+    <!-- Main Scrollable Body -->
+    <main class="main-scroll">
+      
+      <!-- TAB 1: HOME & PRODUCTS VIEW -->
+      <div id="view-home" class="tab-view">
+        
+        <!-- Hero Promotion Card -->
+        <div class="promo-card">
+          <span class="promo-badge">Direct from Dairy • Sivakasi</span>
+          <h2 class="promo-title">100% Pure Desi Dairy by Kogila Selvaganesh</h2>
+          <p class="promo-desc">
+            Hand-churned golden Desi Ghee, super-soft Malai Paneer, and authentic Sivakasi Palgova.
+          </p>
+          <div class="promo-art">🧈</div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="categories-wrapper">
+          <div class="categories-tabs">
+            <button class="cat-pill active" data-category="all">
+              <span>🥛</span> All Products
+            </button>
+            <button class="cat-pill" data-category="ghee">
+              <span>🧈</span> Pure Desi Ghee
+            </button>
+            <button class="cat-pill" data-category="paneer">
+              <span>🧀</span> Fresh Paneer
+            </button>
+            <button class="cat-pill" data-category="gova">
+              <span>🥣</span> Palgova (Khoya)
+            </button>
+          </div>
+        </div>
+
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-title">
+            <span>✨</span> Daily Churned Fresh Batch
+          </div>
+          <span class="section-count">Bharathi Nagar, Sivakasi</span>
+        </div>
+
+        <!-- Products List -->
+        <div class="products-grid" id="products-container">
+          <!-- Dynamically injected via app.js with real photos -->
+        </div>
+
+        <!-- Owner & Store Info Banner -->
+        <div style="margin-top: 24px; padding: 18px; background: #FFFFFF; border-radius: 20px; border: 1.5px solid #FDE68A; box-shadow: var(--shadow-sm);">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #FEF3C7; color: #B45309; display: flex; align-items: center; justify-content: center; font-size: 22px;">
+              👑
+            </div>
+            <div>
+              <div style="font-size: 14px; font-weight: 800; color: #1C1917;">Kogila Selvaganesh</div>
+              <div style="font-size: 11px; color: #059669; font-weight: 700;">Owner & Proprietor • Rahu Milk Products</div>
+            </div>
+          </div>
+
+          <div style="font-size: 12px; color: #57534E; line-height: 1.6; margin-bottom: 14px;">
+            📍 <strong>Address:</strong> Bharathi Nagar, Sivakasi - 626123<br>
+            📞 <strong>Phone:</strong> +91 98940 39804<br>
+            ✉️ <strong>Email:</strong> kogiselvarahu@gmail.com
+          </div>
+
+          <div style="display: flex; gap: 8px;">
+            <a href="tel:9894039804" style="flex: 1; background: #FFFBEB; border: 1px solid #FDE68A; color: #B45309; text-align: center; padding: 9px; border-radius: 12px; font-size: 12px; font-weight: 800; text-decoration: none;">
+              📞 Call Now
+            </a>
+            <a href="https://wa.me/919894039804?text=Vanakkam%20Kogila%20Selvaganesh%20ma'am,%20I%20would%20like%20to%20order%20milk%20products." target="_blank" style="flex: 1; background: #25D366; color: #FFFFFF; text-align: center; padding: 9px; border-radius: 12px; font-size: 12px; font-weight: 800; text-decoration: none;">
+              💬 WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div style="margin-top: 16px; padding: 16px; background: #FFFFFF; border-radius: 16px; border: 1px solid #EADBCE; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span style="font-size: 22px;">🌱</span>
+            <div style="font-size: 11px; font-weight: 700; color: #44403C;">100% Traditional Bilona Churned</div>
+          </div>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span style="font-size: 22px;">❄️</span>
+            <div style="font-size: 11px; font-weight: 700; color: #44403C;">Cold Temperature Sealed</div>
+          </div>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span style="font-size: 22px;">🛵</span>
+            <div style="font-size: 11px; font-weight: 700; color: #44403C;">Fast Sivakasi Express Delivery</div>
+          </div>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span style="font-size: 22px;">💯</span>
+            <div style="font-size: 11px; font-weight: 700; color: #44403C;">Pure Milk • No Added Starch</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TAB 2: LIVE ORDER TRACKING VIEW -->
+      <div id="view-tracking" class="tab-view" style="display: none;">
+        <div class="section-header" style="margin-bottom: 16px;">
+          <div class="section-title">
+            <span>📍</span> Live Order Tracking
+          </div>
+          <button onclick="pollOrFetchOrder(AppState.activeOrder?.id)" style="background: none; border: none; font-size: 11px; color: var(--primary-dark); font-weight: 700; cursor: pointer;">
+            🔄 Refresh Status
+          </button>
+        </div>
+
+        <div id="tracking-content">
+          <!-- Injected via app.js -->
+        </div>
+      </div>
+
+      <!-- TAB 3: CUSTOMER TO STORE LIVE CHAT VIEW -->
+      <div id="view-chat" class="tab-view" style="display: none;">
+        <div class="section-header" style="margin-bottom: 10px;">
+          <div class="section-title">
+            <span>💬</span> Message Kogila Selvaganesh
+          </div>
+          <span style="font-size: 11px; color: #059669; font-weight: 700;">● Owner Online (Sivakasi)</span>
+        </div>
+
+        <div class="chat-container">
+          <div class="chat-messages-box" id="chat-messages-box">
+            <!-- Messages injected via app.js -->
+          </div>
+
+          <div class="chat-input-bar">
+            <input 
+              type="text" 
+              id="chat-text-input" 
+              class="chat-input" 
+              placeholder="Ask Kogila Selvaganesh about milk products..." 
+            />
+            <button class="chat-send-btn" onclick="sendChatMessage()" title="Send Message">
+              ➤
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Floating Action Cart Bar -->
+    <div class="floating-cart-bar" id="floating-cart-bar" onclick="openCartSheet()">
+      <div class="floating-cart-left">
+        <div class="cart-pill-icon">🛒</div>
+        <div>
+          <div class="cart-items-summary" id="cart-items-summary">1 item in Bag</div>
+          <div class="cart-total-summary" id="cart-total-summary">₹800</div>
+        </div>
+      </div>
+      <div class="floating-cart-action">
+        <span>View Bag</span>
+        <span>&rsaquo;</span>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation Bar (Customer Only - 4 Tabs) -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" id="nav-home" onclick="switchTab('home')">
+        <span class="nav-icon">🥛</span>
+        <span>Products</span>
+      </button>
+
+      <button class="nav-item" id="nav-bag" onclick="openCartSheet()">
+        <span class="nav-icon">🛍️</span>
+        <span>Bag</span>
+        <span class="nav-badge" id="nav-cart-badge" style="display: none;">0</span>
+      </button>
+
+      <button class="nav-item" id="nav-tracking" onclick="switchTab('tracking')">
+        <span class="nav-icon">📍</span>
+        <span>Track Order</span>
+      </button>
+
+      <button class="nav-item" id="nav-chat" onclick="switchTab('chat')">
+        <span class="nav-icon">💬</span>
+        <span>Messages</span>
+        <span class="nav-badge" id="nav-chat-badge" style="display: none; background: #059669;">!</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- Cart & Checkout Bottom Sheet Modal -->
+  <div class="modal-backdrop" id="cart-modal">
+    <div class="bottom-sheet">
+      <div class="sheet-drag-handle" onclick="closeCartSheet()"></div>
+      <div class="sheet-header">
+        <div class="sheet-title">
+          <span>🛍️</span> Review Dairy Bag
+        </div>
+        <button class="close-sheet-btn" onclick="closeCartSheet()">✕</button>
+      </div>
+
+      <div class="sheet-body" id="cart-sheet-body">
+        <!-- Injected via app.js -->
+      </div>
+
+      <div class="sheet-footer" id="cart-sheet-footer">
+        <!-- Checkout button injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Store Owner Info Modal -->
+  <div class="modal-backdrop" id="store-info-modal">
+    <div class="bottom-sheet">
+      <div class="sheet-drag-handle" onclick="closeStoreInfoModal()"></div>
+      <div class="sheet-header">
+        <div class="sheet-title">
+          <span>🥛</span> About Rahu Milk Products
+        </div>
+        <button class="close-sheet-btn" onclick="closeStoreInfoModal()">✕</button>
+      </div>
+
+      <div class="sheet-body" style="padding: 20px;">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 10px; color: #FFF; box-shadow: 0 6px 16px rgba(217, 119, 6, 0.3);">
+            🥛
+          </div>
+          <h3 style="font-size: 18px; font-weight: 800; color: #1C1917;">Rahu Milk Products</h3>
+          <p style="font-size: 12px; color: #059669; font-weight: 700;">Owner: Kogila Selvaganesh</p>
+        </div>
+
+        <div style="background: #FDFBF7; border: 1px solid #EADBCE; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px; font-size: 13px;">
+          <div>
+            <strong style="color: #78350F;">📍 Store Location:</strong>
+            <div style="color: #44403C; margin-top: 2px;">Bharathi Nagar, Sivakasi - 626123, Tamil Nadu</div>
+          </div>
+
+          <div>
+            <strong style="color: #78350F;">📞 Contact Number:</strong>
+            <div style="color: #44403C; margin-top: 2px;">+91 98940 39804 (Call / WhatsApp)</div>
+          </div>
+
+          <div>
+            <strong style="color: #78350F;">✉️ Email Address:</strong>
+            <div style="color: #44403C; margin-top: 2px;">kogiselvarahu@gmail.com</div>
+          </div>
+
+          <div>
+            <strong style="color: #78350F;">🏭 Production & Delivery:</strong>
+            <div style="color: #44403C; margin-top: 2px;">Factory Fresh Milk Products • Order 24 Hours • Delivered within 1 Day across Sivakasi.</div>
+          </div>
+
+          <div>
+            <strong style="color: #78350F;">🧈 Real Dairy Specialties:</strong>
+            <div style="color: #44403C; margin-top: 2px;">Pure Desi Ghee (Half-Litre ₹400, 1 Litre ₹800), Malai Paneer (₹460), Diet Paneer (₹460), Non-Fat Paneer (₹400), Palgova / Milk Gova (1kg ₹440, 500g ₹220).</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+          <a href="tel:9894039804" style="flex: 1; background: #D97706; color: #FFF; text-align: center; padding: 12px; border-radius: 14px; font-weight: 800; text-decoration: none; font-size: 13px;">
+            📞 Call Owner
+          </a>
+          <a href="https://wa.me/919894039804?text=Vanakkam%20Kogila%20Selvaganesh%20ma'am" target="_blank" style="flex: 1; background: #25D366; color: #FFF; text-align: center; padding: 12px; border-radius: 14px; font-weight: 800; text-decoration: none; font-size: 13px;">
+            💬 WhatsApp
+          </a>
+        </div>
+
+        <!-- Discreet Owner-Only Portal Link -->
+        <div style="text-align: center; margin-top: 24px; padding-top: 14px; border-top: 1px dashed #E5E7EB;">
+          <a href="/admin" style="font-size: 11px; color: #94A3B8; text-decoration: none; font-weight: 600;">
+            🔒 Owner Portal (Restricted Entry)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Connect Modal -->
+  <div class="modal-backdrop" id="mobile-connect-modal">
+    <div class="bottom-sheet" style="max-height: 90vh;">
+      <div class="sheet-drag-handle" onclick="closeMobileConnectModal()"></div>
+      <div class="sheet-header">
+        <div class="sheet-title">
+          <span>📱</span> Open on Your Mobile Phone
+        </div>
+        <button class="close-sheet-btn" onclick="closeMobileConnectModal()">✕</button>
+      </div>
+
+      <div class="sheet-body" style="padding: 20px; text-align: center;">
+        <p style="font-size: 13px; color: #57534E; margin-bottom: 16px;">
+          Connect your phone to the <strong>same Wi-Fi or Mobile Hotspot</strong> as this computer:
+        </p>
+
+        <div style="background: #FFFFFF; border: 2px solid #F59E0B; border-radius: 20px; padding: 16px; display: inline-block; box-shadow: var(--shadow-md); margin-bottom: 14px;">
+          <img 
+            id="mobile-qr-code" 
+            src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=http://192.168.100.54:3000" 
+            alt="Scan QR to open on phone" 
+            style="width: 180px; height: 180px; display: block;"
+            onerror="this.style.display='none'; document.getElementById('qr-fallback').style.display='block';"
+          />
+          <div id="qr-fallback" style="display: none; padding: 20px 10px; font-size: 12px; color: #78350F;">
+            Type in phone browser: <br>
+            <strong style="font-size: 16px; color: #D97706;">http://192.168.100.54:3000</strong>
+          </div>
+        </div>
+
+        <div style="background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 12px; padding: 10px 14px; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between;">
+          <code id="mobile-url-text" style="font-size: 14px; font-weight: 800; color: #B45309;">http://192.168.100.54:3000</code>
+          <button onclick="copyMobileUrl()" style="background: #D97706; color: #FFF; border: none; padding: 6px 12px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer;">
+            📋 Copy
+          </button>
+        </div>
+
+        <div style="text-align: left; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 14px; font-size: 12px; color: #334155; line-height: 1.6;">
+          <strong>📲 Instructions:</strong><br>
+          <strong>1.</strong> Ensure your mobile phone and this PC are on the <strong>same Wi-Fi</strong>.<br>
+          <strong>2.</strong> Scan QR code or type <code>http://192.168.100.54:3000</code> in Chrome/Safari.<br>
+          <strong>3.</strong> Tap <strong>"Add to Home Screen"</strong> in your browser to install as an app!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/audio.js"></script>
+  <script src="/js/app.js"></script>
+  <script>
+    function openMobileConnectModal() {
+      const modal = document.getElementById('mobile-connect-modal');
+      if (modal) modal.classList.add('active');
+    }
+    function closeMobileConnectModal() {
+      const modal = document.getElementById('mobile-connect-modal');
+      if (modal) modal.classList.remove('active');
+    }
+    function copyMobileUrl() {
+      const text = document.getElementById('mobile-url-text').innerText;
+      navigator.clipboard.writeText(text);
+      showToast('Copied URL: ' + text + ' 📋');
+    }
+  </script>
+</body>
+</html>
